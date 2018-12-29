@@ -73,7 +73,91 @@ body {
 .menu-arrow {
   padding-left: .25rem; }
 
-@media only screen and (min-width: 850px) {
+h1 {
+  font-size: 1.476em;
+  margin-bottom: .55rem; }
+
+h2 {
+  font-size: 1.383em;
+  margin-bottom: .5rem; }
+
+h3 {
+  font-size: 1.296em;
+  margin-bottom: .45rem; }
+
+h4 {
+  font-size: 1.215em;
+  margin-bottom: .4rem; }
+
+h5 {
+  font-size: 1.138em;
+  margin-bottom: .35rem; }
+
+h6 {
+  font-size: 1.067em;
+  margin-bottom: .3rem; }
+
+h1, h2, h3, h4, h5, h6, b {
+  font-weight: 700; }
+
+p, a, button {
+  font-size: 1em; }
+
+main {
+  display: block; }
+  main section {
+    padding: 0 1rem; }
+
+.full-viewport {
+  height: 100vh; }
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.center-text {
+  text-align: center; }
+
+.next-section {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #e6e6e6;
+  padding: .5rem 1rem;
+  border: 0.1rem solid #cccccc;
+  border-radius: 2rem; }
+
+.next-section:hover, .next-section:focus {
+  background-color: #f2f2f2;
+  font-weight: 700; }
+
+.transparent-background {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.75); }
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#intro-section {
+  background-image: url("../images/intro-image.jpeg"); }
+
+#personal-history {
+  padding: 4rem 1rem; }
+
+.section-divider {
+  margin-bottom: 3rem; }
+
+#professional-history {
+  background-image: url("../images/professional-image.jpg");
+  padding: 4rem 1rem; }
+  #professional-history .flex-divider {
+    text-align: center; }
+
+@media only screen and (min-width: 855px) {
   #sitewide-header {
     border-bottom: 0.1rem solid #cccccc; }
   #toggled-navigation {
@@ -90,4 +174,24 @@ body {
     display: none; }
   #toggled-navigation a, #toggled-navigation button {
     padding: 1rem;
-    border-bottom: none; } }
+    border-bottom: none; }
+  main section {
+    padding: 0 7rem; }
+  #intro-section {
+    background-attachment: fixed; }
+  .flex-divider {
+    display: flex; }
+  .section-divider {
+    padding: 0 1rem; }
+  #personal-history {
+    padding: 7rem 0; }
+  #professional-history {
+    padding: 0; }
+    #professional-history .flex-divider {
+      text-align: center;
+      height: 100vh;
+      align-items: center; }
+      #professional-history .flex-divider .section-divider {
+        margin: 1rem; }
+  .grow-one {
+    flex-grow: 1; } }

@@ -4,6 +4,8 @@ $white95: #f2f2f2;
 $white90: #e6e6e6;
 $white80: #cccccc;
 $white5: #0d0d0d;
+$whiteTransparent: rgba(255, 255, 255, .75);
+
 
 
 // -- RESET --
@@ -108,7 +110,119 @@ body {
 	padding-left: .25rem;
 }
 
-@media only screen and (min-width: 850px) {
+
+// -- MAIN CONTENT --
+
+h1 {
+	font-size: 1.476em;
+	margin-bottom: .55rem;
+}
+
+h2 {
+	font-size: 1.383em;
+	margin-bottom: .5rem;
+}
+
+h3 {
+	font-size: 1.296em;
+	margin-bottom: .45rem;
+}
+
+h4 {
+	font-size: 1.215em;
+	margin-bottom: .4rem;
+}
+
+h5 {
+	font-size: 1.138em;
+	margin-bottom: .35rem;
+}
+
+h6 {
+	font-size: 1.067em;
+	margin-bottom: .3rem;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+	font-weight: 700;
+}
+
+p, a, button {
+	font-size: 1em;
+}
+
+main {
+	display: block;
+	section {
+		padding: 0 1rem;
+	}
+}
+
+.full-viewport {
+	height: 100vh;
+}
+
+.center-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.next-section {
+	display: inline-block;
+	margin-top: 1rem;
+	text-align: center;
+	background-color: $white90;
+	padding: .5rem 1rem;
+	border: .1rem solid $white80;
+	border-radius: 2rem;
+}
+
+.next-section:hover, .next-section:focus {
+	background-color: $white95;
+	font-weight: 700;
+}
+
+.transparent-background {
+	padding: 1rem;
+	border-radius: 1rem;
+	background-color: $whiteTransparent;
+}
+
+.bg-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#intro-section {
+	background-image: url('../images/intro-image.jpeg');
+}
+
+#personal-history {
+	padding: 4rem 1rem;
+}
+
+.section-divider {
+	margin-bottom: 3rem;
+}
+
+#professional-history {
+	background-image: url('../images/professional-image.jpg');
+	padding: 4rem 1rem;
+		.flex-divider {
+			text-align: center;
+		}
+	}
+
+
+// -- 855PX MEDIA QUERY -- 
+
+@media only screen and (min-width: 855px) {
 	#sitewide-header {
 		border-bottom: .1rem solid $white80;
 	}
@@ -138,8 +252,44 @@ body {
 	a, button {
 		padding: 1rem;
 		border-bottom: none;
+		}
 	}
-}
 
+	// -- MAIN CONTENT @855PX --
+	main section {
+		padding: 0 7rem;
+	}
 
+	#intro-section {
+		background-attachment: fixed;
+	}
+
+	.flex-divider {
+		display: flex;
+	}
+
+	.section-divider {
+		padding: 0 1rem;
+	}
+
+	#personal-history {
+		padding: 7rem 0;
+	}
+
+	#professional-history {
+		padding: 0;
+		.flex-divider {
+			text-align: center;
+			height: 100vh;
+			align-items: center;
+			.section-divider {
+				margin: 1rem;
+			}
+		}
+	}
+
+	.grow-one {
+		flex-grow: 1;
+
+	}
 }
