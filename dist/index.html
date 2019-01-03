@@ -3,100 +3,170 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Kurtis Kovel Portfolio</title>
+	<title>Kurtis Kovel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header id="sitewide-header">
-		<a href="#main-content" id="skip-header">skip to main content</a>
-		<nav id="navigation-container">
-			<ul id="constant-navigation">
-				<li id="sitewide-logo"><a href="index.html">Kurtis Kovel</a></li>
-				<li id="toggle-menu"><button>&#9776; Menu <img src="images/menu-arrow.png" alt="menu arrow" class="menu-arrow"></button></li>
-			</ul>
-			<ul id="toggled-navigation">
-				<li><a href="#">Personal History</a></li>
-				<li><a href="#">Professional History</a></li>
-				<li>
-					<button>Coding Experience<img src="images/menu-arrow.png" alt="menu arrow" class="menu-arrow"></button>
-					<ul id="submenu-one">
-						<li><a href="#">View All</a></li>
-						<li><a href="#">HTML5</a></li>
-						<li><a href="#">CSS3 &amp; SASS</a></li>
-						<li><a href="#">JavaScript</a></li>
-						<li><a href="#">Tools &amp; Libraries</a></li>
-					</ul>
+		<ul id="visable-navigation">
+			<li><a href="#main-content" id="skip-header">skip to main content</a></li>
+			<div class="flex-container">
+				<li id="logo-container"><a href="index.html">Kurtis Kovel</a></li>
+				<li class="desktop-inactivated" aria-hidden="false">
+					<button id="toggle-navigation"  aria-expanded="false" aria-controls="navigation-list">&#9776; Menu</button>
 				</li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Contact</a></li>
+			</div>
+		</ul>
+		<nav aria-haspopup="true" role="navigation">
+			<ul id="navigation-list" class="desktop-activated" role="menu" aria-hidden="true" >
+				<li><a href="#about-me">About Me</a></li>
+				<li><a href="#language-tool">Languages &amp; Tools</a></li>
+				<li><a href="#my-project">Projects</a></li>
+				<li><a href="#contact-me">Contact Me</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main id="main-content">
-		<section id="intro-section" class="full-viewport center-content bg-image">
+		<section id="home-section" class="background-image flex-container">
 			<div class="transparent-background">
-				<header>
-					<h1>Only as Good as The User</h1>
-				</header>
-				<p>The tools we use to create websites and applications are only as good as our knowledge will allow them to be.  On the other hand, we should always keep the users of our sites and apps in mind because our creations are only as good as the users knowledge of how to use them will allow them to be.</p>
-				<div class="center-text">
-					<a href="#personal-history" class="next-section">View Personal History</a>
-				</div>
+				<h1>Kurtis John-Eric Kovel</h1>
+				<p>Front-End Developer and Designer</p>
 			</div>
+			<div class="arrow-container">
+				<a href="#about-me"><img src="images/scroll-arrow.png" alt="go to about me section"></a>
+			</div>
+			
 		</section>
-		<section id="personal-history">
-			<div class="flex-divider">
-				<div class="section-divider">
-					<header>
-						<h2>Personal History</h2>
-					</header>
-					<p>I was born in Charlotte North Carolina where some of my earliest memories were of being a <b>problem solver</b>. I remember remapping my mothers’ keyboard in order to make it easier for my small hands to reach certain keys. Little did I know that something so simple me would grow into a lifelong pursuit of <b>efficiency paired with empathy</b> that would eventually lead me towards my career.</p>
-				</div>
-				<div class="section-divider">
-					<header>
-						<h2>My Education</h2>
-					</header>
-					<p>After high school I attended <b>ITT Technical Institute</b> as a graphic design major where I met a professor by the name of Michael Grant.  He taught me one of the most important lessons I would ever learn, how to be <b>resourceful and self-educated</b>.  The next several years of my life were filled with <b>online tutorials and documentation</b> that sharpened my development skills.</p>
-				</div>
-				<div class="section-divider">
-					<header>
-						<h2>Landing My First Job</h2>
-					</header>				
-					<p>After graduation I worked as a <b>freelance web designer and developer</b> which eventually lead to my first full time position in my field.  My client Carolina Digital Photo needed a <b>Photoshop Expert</b> which at the time I defiantly was not.  With the help of my boss Bill Plampin and more online tutorial I became their Photoshop expert and while <b>building websites</b> for their clients. </p>
-				</div>
-			</div>
-			<div class="center-text">
-					<a href="#professional-history" class="next-section">View Professional History</a>
-			</div>
+		<section id="about-me">
+			<h2>About Me</h2>
+			<p>I was born in 1989 in Charlotte North Carolina, I currently live just east of the city in a small town called Midland with my girlfriend Heather and our two dogs Jango and Riley. When I am not coding or gaming, I am typically playing sports such as football, basketball, soccer, golf or snowboarding.  I attended ITT Technical Institute where I received an associated degree in Graphic Design.  Carolina Digital Photo, one of my freelance web development clients became my first industry related position as a Photoshop expert.  The experience I gained there landed me a role in the E-Commerce Department at Belk as a Product Image Producer.  After a year I was promoted to the Department Landing Page team where we used HTML and CSS to update numerous pages on the website.  After parting ways with Belk I have been working with my own clients to improve their knowledge of HTML, CSS, compliance and best practices.</p>
+
 		</section>
-		<section id="professional-history" class="bg-image">
-			<div class="flex-divider">
-				<div class="section-divider grow-one transparent-background">
-					<header>
-						<h2>Carolina Digital Photo</h2>
-					</header>
-					<img src="images/cdpg-image.png" alt="carolina digital photo group">
-					<p>June 2011 &ndash; May 2012</p>
+		<section id="language-tool">
+			<h3>Languages &amp; Tools</h3>
+			<ul>
+				<div>
+					<div>
+						<li>
+							<div>
+								<img src="images/html5-logo.png" alt="HTML5">
+								<p>HTML5</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/css3-logo.png" alt="CSS3">
+								<p>CSS3</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/javascript-logo.png" alt="JavaScript">
+								<p>JavaScript</p>
+							</div>
+						</li>
+					</div>
+					<div>
+						<li>
+							<div>
+								<img src="images/wcag-logo.png" alt="W3C WCAG 2.0">
+								<p>WCAG 2.0</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/aria-logo.png" alt="W3C WAI&ndash;ARIA">
+								<p>WAI&ndash;ARIA</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/sublime-logo.png" alt="Sublime Text 3">
+								<p>Sublime Text 3</p>
+							</div>
+						</li>
+					</div>
 				</div>
-				<div class="section-divider grow-one transparent-background">
-					<header>
-						<h2>Belk E-Commerce</h2>
-					</header>
-					<img src="images/belk-image.png" alt="belk e-commerce">
-					<p>October 2012 &ndash; July 2016</p>
+				<div>
+					<div>
+						<li>
+							<div>
+								<img src="images/sass-logo.png" alt="Sass">
+								<p>Sass</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/gulp-logo.png" alt="Gulp">
+								<p>Gulp</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/git-logo.png" alt="Git">
+								<p>Git</p>
+							</div>
+						</li>
+					</div>
+					<div>
+						<li>
+							<div>
+								<img src="images/photoshop-logo.png" alt="Photoshop">
+								<p>Photoshop</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/illustrator-logo.png" alt="Illustrator">
+								<p>Illustrator</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/xd-logo.png" alt="Adobe Xd">
+								<p>Adobe Xd</p>
+							</div>
+						</li>
+					</div>
 				</div>
-				<div class="section-divider grow-one transparent-background">
-					<header>
-						<h2>Freelance Development</h2>
-					</header>
-					<img src="images/freelance-image.png" alt="freelance web development">
-					<p>September 2009 &ndash; Current</p>
-				</div>
-			</div>
+			</ul>
 		</section>
+		<section id="my-project">
+			<h4>My Projects</h4>
+		</section>
+		
 	</main>
-	<script src="js/main.js"></script>
+	<section id="contact-me">
+		<h5>Contact Me</h5>
+		<form action="" role="form">
+			First name:<br>
+			<input type="text" name="firstname"><br>
+			Last name:<br>
+			<input type="text" name="lastname"><br>
+			Company name:<br>
+			<input type="text" name="lastname"><br>
+			I Would Like You to:<br>
+			<select name="reason">
+				<option value="website">Build a Website for My Company </option>
+				<option value="hire">Come Work for Our Company</option>
+			</select><br>
+			Message:<br>
+			<textarea name="message" rows="10" cols="30"></textarea><br>
+			<input type="submit">
+		</form>
+	</section>
+	<footer id="sitewide-footer">
+		<nav>
+			<ul>
+				<li><a href="#home-section">Back to Top</a></li>
+				<li><a href="#about-me">About Me</a></li>
+				<li><a href="#language-tool">Languages &amp; Tools</a></li>
+				<li><a href="#my-project">Projects</a></li>
+				<li><a href="#contact-me">Contact Me</a></li>
+			</ul>
+		</nav>
+	</footer>
 </body>
 </html>
