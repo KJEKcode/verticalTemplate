@@ -34,35 +34,36 @@
 				<h1>Kurtis John-Eric Kovel</h1>
 				<p>Front-End Developer and Designer</p>
 			</div>
-			<div class="arrow-container">
-				<a href="#about-me"><img src="images/scroll-arrow.png" alt="go to about me section"></a>
-			</div>
+				<a href="#about-me"><img src="images/scroll-arrow-light.png" alt="go to about me section"></a>
 			
 		</section>
 		<section id="about-me">
 			<h2>About Me</h2>
+			<div>
+				<img src="images/kurtis-kovel.jpg" alt="Photo of Kurtis Kovel">
+			</div>
 			<p>I was born in 1989 in Charlotte North Carolina, I currently live just east of the city in a small town called Midland with my girlfriend Heather and our two dogs Jango and Riley. When I am not coding or gaming, I am typically playing sports such as football, basketball, soccer, golf or snowboarding.  I attended ITT Technical Institute where I received an associated degree in Graphic Design.  Carolina Digital Photo, one of my freelance web development clients became my first industry related position as a Photoshop expert.  The experience I gained there landed me a role in the E-Commerce Department at Belk as a Product Image Producer.  After a year I was promoted to the Department Landing Page team where we used HTML and CSS to update numerous pages on the website.  After parting ways with Belk I have been working with my own clients to improve their knowledge of HTML, CSS, compliance and best practices.</p>
-
+			<div class="arrow-container"><a href="#language-tool"><img src="images/scroll-arrow-dark.png" alt="go to lauguages and tools section"></a></div>
 		</section>
-		<section id="language-tool">
+		<section id="language-tool" class="background-image">
 			<h3>Languages &amp; Tools</h3>
 			<ul>
 				<div>
 					<div>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/html5-logo.png" alt="HTML5">
 								<p>HTML5</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/css3-logo.png" alt="CSS3">
 								<p>CSS3</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/javascript-logo.png" alt="JavaScript">
 								<p>JavaScript</p>
 							</div>
@@ -70,19 +71,19 @@
 					</div>
 					<div>
 						<li>
-							<div>
-								<img src="images/wcag-logo.png" alt="W3C WCAG 2.0">
+							<div class="transparent-background">
+								<img src="images/w3c-logo.png" alt="W3C WCAG 2.0">
 								<p>WCAG 2.0</p>
 							</div>
 						</li>
 						<li>
-							<div>
-								<img src="images/aria-logo.png" alt="W3C WAI&ndash;ARIA">
+							<div class="transparent-background">
+								<img src="images/w3c-logo.png" alt="W3C WAI&ndash;ARIA">
 								<p>WAI&ndash;ARIA</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/sublime-logo.png" alt="Sublime Text 3">
 								<p>Sublime Text 3</p>
 							</div>
@@ -92,19 +93,19 @@
 				<div>
 					<div>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/sass-logo.png" alt="Sass">
 								<p>Sass</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/gulp-logo.png" alt="Gulp">
 								<p>Gulp</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/git-logo.png" alt="Git">
 								<p>Git</p>
 							</div>
@@ -112,19 +113,19 @@
 					</div>
 					<div>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/photoshop-logo.png" alt="Photoshop">
 								<p>Photoshop</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/illustrator-logo.png" alt="Illustrator">
 								<p>Illustrator</p>
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class="transparent-background">
 								<img src="images/xd-logo.png" alt="Adobe Xd">
 								<p>Adobe Xd</p>
 							</div>
@@ -141,18 +142,18 @@
 	<section id="contact-me">
 		<h5>Contact Me</h5>
 		<form action="" role="form">
-			First name:<br>
-			<input type="text" name="firstname"><br>
-			Last name:<br>
-			<input type="text" name="lastname"><br>
-			Company name:<br>
-			<input type="text" name="lastname"><br>
-			I Would Like You to:<br>
+			<label for="firstname">First Name:</label>
+			<input type="text" name="firstname">
+			<label for="lastname">Last Name:</label>
+			<input type="text" name="lastname">
+			<label for="companyname">Company Name:</label>
+			<input type="text" name="companyname">
+			<label for="reason">I Would Like You to:</label>
 			<select name="reason">
 				<option value="website">Build a Website for My Company </option>
 				<option value="hire">Come Work for Our Company</option>
-			</select><br>
-			Message:<br>
+			</select>
+			<label for="message">Message:</label>
 			<textarea name="message" rows="10" cols="30"></textarea><br>
 			<input type="submit">
 		</form>

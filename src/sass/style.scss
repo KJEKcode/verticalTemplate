@@ -10,7 +10,7 @@ $white95: #f2f2f2;
 $white90: #e6e6e6;
 $white80: #cccccc;
 $white5: #0d0d0d;
-$whiteTransparent: rgba(13, 13, 13, .80);
+$whiteTransparent: rgba(13, 13, 13, .65);
 
 // -- SPACING --
 $standardPadding: 1rem;
@@ -112,6 +112,12 @@ p, a, button {
 	background-color: $whiteTransparent;
 }
 
+.arrow-container {
+	text-align: center;
+}
+
+
+
 //  -- HEADER & NAVIGATION -- 
 
 #sitewide-header {
@@ -119,6 +125,7 @@ p, a, button {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
 	a:hover, button:hover {
 		font-weight: 700;
 		background-color: $white95;
@@ -165,6 +172,10 @@ p, a, button {
 
 // -- MAIN CONTENT --
 
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
 #home-section {
 	height: 100vh;
 	background-color: $white5;
@@ -187,11 +198,92 @@ p, a, button {
 	}
 }
 
+#about-me {
+	padding: 4rem 1rem;
+	background-color: $white95;
+	h2 {
+		margin: 0 0 1rem 0;
+		border-bottom: .1rem solid $white80;
+	}
+	div {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	img {
+		border-radius: 9rem;
+	}
+	p {
+		line-height: 1.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+#language-tool {
+	padding: 4rem 1rem;
+	background-image: url('../images/language-image.jpg');
+	background-size: cover;
+	color: $white95;
+	h3 {
+		padding-bottom: .5rem;
+		margin-bottom: 1rem;
+		border-bottom: .1rem solid $white80;
+	}
+	li {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.transparent-background {
+		display: inline-block;
+		padding: 2rem;
+		border-radius: 1rem;
+		border: .1rem solid $white80;
+	}
+	p {
+		margin-top: 1rem;
+		
+	}
+}
+
+//  -- FORM STYLE --
+
+form {
+	padding: 1rem;
+}
+
+label {
+	margin: .5rem 0;
+}
+
+label, form input {
+	display: block;
+}
+form input, textarea {
+	width: 100%;
+}
+
+// -- FOOTER STYLES --
+
+#sitewide-footer {
+	background-color: $white90;
+	text-align: center;
+	padding: 1rem 0;
+	li {
+		border-bottom: .1rem solid $white80;
+		a {
+			padding: 1rem 0;
+		}
+	}
+}
+
 // -- 855PX MEDIA QUERY -- 
 
 @media only screen and (min-width: 768px) {
 
 	// -- REUSABLE CLASSES --
+
+	.background-image {
+		background-attachment: fixed;
+	}
 
 	.desktop-activated {
 		display: block;
