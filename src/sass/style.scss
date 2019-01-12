@@ -98,12 +98,21 @@ p, a, button {
 	padding: 1rem;
 }
 
+#sitewide-header a:hover, #sitewide-header button:hover, #sitewide-footer a:hover {
+	text-decoration: underline;
+	background-color: lighten(#f2f2f2, 5%);
+}
+
 #visible-navigation {
 	display: flex;
 }
 
 #logo-container {
 	flex-grow: 1;
+}
+
+#logo-container a {
+	display: inline-block;
 }
 
 #toggled-navigation ul {
@@ -133,6 +142,14 @@ p, a, button {
 .arrow-container {
 	text-align: center;
 	margin-top: 1rem;
+}
+
+.arrow-container img {
+	border-radius: 1.3rem;
+}
+
+.arrow-container a:hover > img {
+	background-color: #fff;
 }
 
 .next-section {

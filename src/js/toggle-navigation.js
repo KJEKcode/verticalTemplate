@@ -13,6 +13,7 @@ function loadControls() {
     /* add a click event listener to the entire header */ 
     sitewideHeader.addEventListener('click', controlClick);
     window.addEventListener('resize', debounce(checkAria, 100, true));
+    window.addEventListener('scroll', debounce(backToTop, 200));
 }
 
 function controlClick(e) {
@@ -90,6 +91,16 @@ function checkAria() {
     }   
 }
 
+function backToTop() {
+    var topButton = document.getElementById('top-button');
+    var sitewideFooter = document.getElementById('sitewide-footer');
+    if (document.documentElement.scrollTop > window.innerHeight) {
+        topButton.classList.add('show');
+    } else {
+         topButton.classList.remove('show');
+    }
+}
+
 debounce = function(func, wait, immediate) {
     var timeout;
     return function() {
@@ -109,6 +120,5 @@ debounce = function(func, wait, immediate) {
         }
     };
 };
-
 
 window.onload = loadControls;
