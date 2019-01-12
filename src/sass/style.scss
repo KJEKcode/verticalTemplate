@@ -1,22 +1,7 @@
 // -- IMPORT NORMALIZE --
 
 @import "normalize";
-
-// -- VARIABLES --
-
-
-// -- COLOR --
-$white95: #f2f2f2;
-$white90: #e6e6e6;
-$white80: #cccccc;
-$white5: #0d0d0d;
-$whiteTransparent: rgba(13, 13, 13, .65);
-
-// -- SPACING --
-$standardPadding: 1rem;
-
-
-// -- CUSTOM RESET --
+// -- CUSTOM RESET -- 
 
 * {
 	margin: 0;
@@ -25,9 +10,8 @@ $standardPadding: 1rem;
 
 html {
 	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
 }
-
-img {vertical-align:bottom}
 
 ul {
 	list-style: none;
@@ -36,6 +20,7 @@ ul {
 a, button {
 	display: block;
 	color: inherit;
+	line-height: 1.5em;
 }
 
 a {
@@ -81,221 +66,139 @@ h6 {
 	font-size: 1.067em;
 }
 
-h1, h2, h3, h4, h5, h6, b {
-	font-weight: 700;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	margin: .5rem 0;
-}
-
 p, a, button {
 	font-size: 1em;
+
 }
 
-// -- REUSABLE CLASSES -- 
-
-.flex-container {
-	display: flex;
-}
-
-[aria-hidden = "true"] {
+[aria-hidden = true] {
 	display: none;
-}
-
-.background-image {
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.transparent-background {
-	background-color: $whiteTransparent;
-}
-
-.arrow-container {
-	text-align: center;
-}
-
-
-
-//  -- HEADER & NAVIGATION -- 
-
-#sitewide-header {
-	background-color: $white90;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1;
-	a:hover, button:hover {
-		font-weight: 700;
-		background-color: $white95;
-	}
 }
 
 #skip-header {
 	height: 0;
 	overflow: hidden;
-	text-transform: uppercase;
-	font-weight: 700;
 	text-align: center;
 }
 
-#skip-header:focus {
+#skip-header a:focus {
 	height: inherit;
+	padding: 1rem;
+
+}
+
+#sitewide-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: #f2f2f2;
+}
+
+#sitewide-header a, #sitewide-header button, #sitewide-footer a {
 	padding: 1rem;
 }
 
-#visable-navigation {
-	border-bottom: .1rem solid $white80;
-	.flex-container {
-		align-items: baseline;
-	}
+#visible-navigation {
+	display: flex;
 }
 
 #logo-container {
 	flex-grow: 1;
-	a {
-		display: inline-block;
-	}
 }
 
-#logo-container a, #toggle-navigation {
-	padding: $standardPadding;
+#toggled-navigation ul {
+	padding-left: 1rem;
 }
 
-#navigation-list {
-	a {
-		padding: $standardPadding;
-		border-bottom: .1rem solid $white80;
-	}
-}
-
-// -- MAIN CONTENT --
-
-h1, h2, h3, h4, h5, h6 {
-	text-align: center;
-}
-
-#home-section {
+.content-section {
 	height: 100vh;
-	background-color: $white5;
-	background-size: contain;
-	background-image: url('../images/kjek-logo.png');
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	color: $white95;
-	div {
-		border-radius: 1rem;
-		padding: $standardPadding;
-	}
-	p {
-		margin-bottom: .5rem;
-	}
-	a {
-		position: absolute;
-		bottom: 2rem;
-	}
-}
-
-#about-me {
-	padding: 4rem 1rem;
-	background-color: $white95;
-	h2 {
-		margin: 0 0 1rem 0;
-		border-bottom: .1rem solid $white80;
-	}
-	div {
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-	img {
-		border-radius: 9rem;
-	}
-	p {
-		line-height: 1.5rem;
-		margin-bottom: 1rem;
-	}
-}
-
-#language-tool {
-	padding: 4rem 1rem;
-	background-image: url('../images/language-image.jpg');
-	background-size: cover;
-	color: $white95;
-	h3 {
-		padding-bottom: .5rem;
-		margin-bottom: 1rem;
-		border-bottom: .1rem solid $white80;
-	}
-	li {
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-	.transparent-background {
-		display: inline-block;
-		padding: 2rem;
-		border-radius: 1rem;
-		border: .1rem solid $white80;
-	}
-	p {
-		margin-top: 1rem;
-		
-	}
-}
-
-//  -- FORM STYLE --
-
-form {
 	padding: 1rem;
 }
 
-label {
-	margin: .5rem 0;
+.section-header {
+	margin-bottom: 1rem;
 }
 
-label, form input {
-	display: block;
-}
-form input, textarea {
-	width: 100%;
+#home-section, #section-three, #section-five {
+	background-color: #d9d9d9;
 }
 
-// -- FOOTER STYLES --
+#section-two, #section-four, #section-six {
+	background-color: #e6e6e6;
+}
+
+.arrow-container {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.next-section {
+	display: inline;
+}
+
+.top-link {
+	text-align: center;
+	height: 0;
+	overflow-y: hidden;
+}
+
+.top-link:focus {
+	height: inherit;
+	padding: 1rem 0;
+}
 
 #sitewide-footer {
-	background-color: $white90;
+	background-color: #f2f2f2;
 	text-align: center;
-	padding: 1rem 0;
-	li {
-		border-bottom: .1rem solid $white80;
-		a {
-			padding: 1rem 0;
-		}
-	}
 }
 
-// -- 855PX MEDIA QUERY -- 
+#top-button {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	opacity: 0;
+	transform: scale(0);
+	visibility: hidden;
+	transition: .5s;
+}
+
+#top-button.show {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
+}
+
+// -- 768PX MEDIA QUERY -- 
 
 @media only screen and (min-width: 768px) {
-
-	// -- REUSABLE CLASSES --
-
-	.background-image {
-		background-attachment: fixed;
+	#sitewide-header {
+		display: flex;
 	}
-
-	.desktop-activated {
-		display: block;
+	#visible-navigation {
+		flex-grow: 1;
 	}
-
-	.desktop-inactivated {
+	#control-container {
 		display: none;
 	}
-	
-	#home-section {
-		background-size: 768px 606px;
-		background-image: url('../images/kjek-logo.png');
+	#toggled-navigation {
+		display: flex;
 	}
-
+	#toggled-navigation ul {
+		padding-left: 0;
+	}
+	#dropdown-one {
+		position: absolute;
+		background-color: #f2f2f2;
+	}
+	#sitewide-footer ul {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	#top-button {
+		bottom: .2rem;
+	}
 }
+
