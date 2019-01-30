@@ -9,11 +9,15 @@
 }
 
 html {
-	font-family: 'Open Sans', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	scroll-behavior: smooth;
 }
 
 ul {
+	list-style: none;
+}
+
+ul ul {
 	list-style: none;
 }
 
@@ -33,8 +37,7 @@ button {
 	border: none;
 	background: inherit;
 	font-family: inherit;
-	font-size: 100%;
-	line-height: 1.15;
+	width: 100%;
 	cursor: pointer;
 	text-align: left;
 	font: normal 1em 'Open Sans', sans-serif;
@@ -78,13 +81,19 @@ p, a, button {
 #skip-header {
 	height: 0;
 	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 700;
 	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #f2f2f2;
 }
 
-#skip-header a:focus {
+#skip-header:focus {
 	height: inherit;
 	padding: 1rem;
-
 }
 
 #sitewide-header {
@@ -107,16 +116,16 @@ p, a, button {
 	display: flex;
 }
 
-#logo-container {
-	flex-grow: 1;
-}
-
-#logo-container a {
-	display: inline-block;
+#control-container {
+	margin-left: auto; 
 }
 
 #toggled-navigation ul {
 	padding-left: 1rem;
+}
+
+#home-section h1, #home-section span {
+	text-align: center;
 }
 
 .content-section {
@@ -212,7 +221,7 @@ p, a, button {
 	}
 	#sitewide-footer ul {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
 	}
 	#top-button {
 		bottom: .2rem;

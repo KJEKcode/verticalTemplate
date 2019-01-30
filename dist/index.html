@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <a id="skip-header" href="#main-content">skip to main content</a>
@@ -17,12 +17,12 @@
       <li id="control-container"><button id="menu-button" aria-expanded="false" aria-controls="toggled-navigation">menu</button></li>
     </ul>
     <nav id="navigation-container">
-      <ul id="toggled-navigation" aria-hidden="true">
+      <ul id="toggled-navigation" aria-hidden="true" aria-labelledby="menu-button">
         <li><a href="#home-section">home section</a></li>
         <li><a href="#section-two">section two</a></li>
         <li>
-          <button aria-expanded="false" aria-controls="dropdown-one">three &ndash; five</button>
-          <ul id="dropdown-one" aria-hidden="true">
+          <button id="dropdown1-button" aria-expanded="false" aria-controls="dropdown-one">three &ndash; five</button>
+          <ul id="dropdown-one" aria-hidden="true" aria-labelledby="dropdown1-button">
             <li><a href="#section-three">section three</a></li>
             <li><a href="#section-four">section four</a></li>
             <li><a href="#section-five">section five</a></li>
@@ -106,6 +106,6 @@
     </ul>
   </footer>
   <a href="#home-section" id="top-button"><img src="images/top-button.png" alt="back to top"></a>
-    <script src="js/main.js"></script>
+    <script src="js/compiled.min.js"></script>
 </body>
 </html>
